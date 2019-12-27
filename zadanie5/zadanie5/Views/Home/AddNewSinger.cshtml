@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Add new singer";
+}
+
+@using (Html.BeginForm("AddNewSinger", "Home", FormMethod.Post))
+{
+    <div>
+
+        <p>
+            @Html.Label("name", "Enter singer name")
+            @Html.TextBox("name", "ivanivanov")
+        </p>
+
+        <p>
+            @Html.Label("birthdate", "Enter birthdate")
+            @Html.TextBox("birthdate", "00.00.00")
+        </p>
+
+        <span class="col-md-offset-2 col-md-10">
+            <button type="submit" value="Submit" name="Submit">Submit</button>
+            <button type="submit" value="Cancel" name="Cancel">Cancel</button>
+        </span>
+    </div>
+}

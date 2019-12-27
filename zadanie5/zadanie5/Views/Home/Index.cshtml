@@ -1,0 +1,30 @@
+﻿@model zadanie5.ViewModels.IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <label>Select singer: </label>
+    <select name="singerId" class="form-control">
+        @foreach (Singer singer in ViewBag.Singers)
+        {
+            <option value="@singer.Id">@singer.Name</option>
+        }
+    </select>
+    <input type="submit" />
+}
+
+<table class="table">
+    @foreach (Album u in Model.Albums)
+    {
+        <tr>
+            <td>@u.Name</td>
+            <td>
+                @String.Format("{0} hours, {1} minutes, {2} seconds, {3} milliseconds",
+                    u.LifeTime.Hours, u.LifeTime.Minutes, u.LifeTime.Seconds, u.LifeTime.Milliseconds)
+            </td>
+            <td>@u.Date</td>
+            <td>@u.Pevets.Name</td>
+        </tr>
+    }
+</table>

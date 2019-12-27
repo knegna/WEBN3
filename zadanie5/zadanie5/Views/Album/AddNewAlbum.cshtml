@@ -1,0 +1,37 @@
+﻿@model zadanie5.ViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Add new album";
+}
+
+@using (Html.BeginForm("AddNewAlbum", "Album", FormMethod.Post))
+{
+    <div>
+
+        <p>
+            <label for="singer">Select album singer</label>
+            <select name="SingerId" id="singer">
+                @foreach (Singer singer in Model.Singers)
+                {
+                    <option value="@singer.Id">@singer.Name</option>
+                }
+            </select>
+        </p>
+
+        <p>
+            @Html.Label("name", "Enter album name")
+            @Html.TextBox("name", "Grey")
+        </p>
+
+        <p>
+            @Html.Label("Date", "Enter date of release")
+            @Html.TextBox("date", "00.00.00", new { type = "string" })
+        </p>
+
+
+        <span class="col-md-offset-2 col-md-10">
+            <button type="submit" value="Submit" name="Submit">Submit</button>
+            <button type="submit" value="Cancel" name="Cancel">Cancel</button>
+        </span>
+    </div>
+}
