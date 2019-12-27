@@ -1,0 +1,27 @@
+﻿@model zadanie4.Models.Singer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <table width="100%" class="table-condensed">
+        <tr>
+            <td>ID</td>
+            <td>Имя</td>
+            <td>Фамилия</td>
+            <td>Дата Рождения</td>
+        </tr>
+        <tr>
+            <td> @ViewBag.ID</td>
+            <td>@ViewBag.Firstname</td>
+            <td>@ViewBag.Lastname</td>
+            <td>@ViewBag.Birthdate</td>
+        </tr>
+    </table>
+</div>
+<p>
+<p><a href="~/Singer/Singer/">Вернуться к списку исполнителей</a></p>

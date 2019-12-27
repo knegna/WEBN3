@@ -1,0 +1,38 @@
+﻿@model IEnumerable<zadanie4.Models.Album>
+@{
+    ViewData["Title"] = "Список Альбомов";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Albums</title>
+</head>
+<body>
+    <h3>Albums</h3>
+    <form method="get" action="/Album/Album/">
+        <input type="text" value="" name="text" />
+        <input type="submit" value="Поиск" />
+    </form>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td></td>
+        </tr>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td>@album.Name</td>
+
+                <td><a href="~/Album/Detail/@album.Id">Детали</a></td>
+                <td><a href="~/Album/Edit/@album.Id">Редактировать</a></td>
+                <td><a href="~/Album/Delete/@album.Id">Удалить</a></td>
+            </tr>
+
+        }
+        <tr>
+            <td><a href="~/Album/Add/">добавить</a></td>
+        </tr>
+    </table>
+</body>
+</html>

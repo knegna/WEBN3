@@ -1,0 +1,31 @@
+﻿@model zadanie4.Models.Singer
+
+@{
+    ViewBag.Title = "Редактировать";
+}
+
+<h2>Редактировать</h2>
+
+<div>
+    <hr />
+    <form method="post">
+        <table width="100%">
+            <tr>
+                <td>Firstname:</td>
+                <td><input type="text" value=@ViewBag.Firstname name="Firstname" /> </td>
+            </tr>
+            <tr>
+                <td>Lastname:</td>
+                <td><input type="text" value=@ViewBag.Lastname name="Lastname" /> </td>
+            </tr>
+            <tr>
+                <td>Birtdate:</td>
+                <td><input type="text" value=@ViewBag.Birthdate name="Birthdate" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+
+    </form>
+    <p><a href="~/Singer/Singer/">Вернутся к списку исполнителей</a></p>
+</div>
+<p>

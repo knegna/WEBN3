@@ -1,0 +1,31 @@
+﻿@model zadanie4.Models.Album
+
+@{
+    ViewBag.Title = "Редактировать";
+}
+
+<h2>Редактировать</h2>
+
+<div>
+    <hr />
+    <form method="post">
+        <table width="100%">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" value=@ViewBag.Name name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>ColSongs:</td>
+                <td><input type="text" value=@ViewBag.ColSongs name="Colsongs" /> </td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td><input type="text" value=@ViewBag.Date name="Date" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+
+    </form>
+    <p><a href="~/Album/Album/">Вернутся к списку альбомов</a></p>
+</div>
+<p>

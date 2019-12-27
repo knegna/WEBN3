@@ -1,0 +1,27 @@
+﻿@model IEnumerable<zadanie4.Models.Singer>
+@{
+    ViewData["Title"] = "Добавить исполнителя";
+}
+
+<div>
+    <h1>Добавить исполнителя</h1>
+    <form method="post">
+        <input type="hidden" name=3 />
+        <table width="100%">
+            <tr>
+                <td>Имя:</td>
+                <td><input type="text" name="Firstname" /> </td>
+            </tr>
+            <tr>
+                <td>Фамилия:</td>
+                <td><input type="text" name="Lastname" /></td>
+            </tr>
+            <tr>
+                <td>Дата Рождения:</td>
+                <td><input type="text" name="Birthdate" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
+<p><a href="~/Singer/Singer/">Вернуться к списку исполнителей</a></p>

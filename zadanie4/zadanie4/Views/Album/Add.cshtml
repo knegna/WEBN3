@@ -1,0 +1,27 @@
+﻿@model IEnumerable<zadanie4.Models.Album>
+@{
+    ViewData["Title"] = "Добавить Альбом";
+}
+
+<div>
+    <h1>Добавить альбом</h1>
+    <form method="post">
+        <input type="hidden" name=3 />
+        <table width="100%">
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>Количество песен:</td>
+                <td><input type="text" name="ColSongs" /></td>
+            </tr>
+            <tr>
+                <td>Дата:</td>
+                <td><input type="text" name="Date" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
+<p><a href="~/Album/Album/">Вернуться к списку альбомов</a></p>

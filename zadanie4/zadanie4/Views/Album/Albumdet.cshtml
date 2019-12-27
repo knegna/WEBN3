@@ -1,0 +1,32 @@
+﻿@model IEnumerable<zadanie4.Models.Album>
+@{
+    //ViewData["Title"] = "Список смартфонов";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Магазин музыки</title>
+</head>
+<body>
+    <h3>Смартфоны</h3>
+    <table>
+        <tr>
+            <td>имя</td>
+            <td>количество</td>
+            <td>дата</td>
+            <td></td>
+        </tr>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td>@album.Name</td>
+                <td>@album.ColSongs</td>
+                <td>@album.Date</td>
+                <td><a href="~/Home/Buy/@album.Id">Купить</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
