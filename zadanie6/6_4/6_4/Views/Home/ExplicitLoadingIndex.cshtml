@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Album catalog";
+}
+
+<h3>Explicit loading</h3>
+<h3>Albums</h3>
+<table class="table-condensed" bgcolor="palepurple" cellpadding="15" cellspacing="15">
+    <tr>
+        <td>Album</td>
+        <td>Singer</td>
+        <td>Date</td>
+
+    </tr>
+
+    @foreach (var album in Model)
+    {
+        <tr>
+            <td>@album.Name</td>
+            <td>@album.Singer.Name</td>
+            <td>@album.Date</td>
+        </tr>
+    }
+</table>
